@@ -1,0 +1,14 @@
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\LaptopSystem.Models.dll.config
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\LaptopSystem.Models.dll
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\LaptopSystem.Models.pdb
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\EntityFramework.dll
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\EntityFramework.SqlServer.dll
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\EntityFramework.xml
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\EntityFramework.SqlServer.xml
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\obj\Release\LaptopSystem.Models.csprojResolveAssemblyReference.cache
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\obj\Release\LaptopSystem.Models.dll
+D:\telerik\telerik\ASP.NET MVC\Exam prep\LaptopSystem\LaptopSystem.Models\obj\Release\LaptopSystem.Models.pdb

@@ -1,0 +1,13 @@
+﻿@model string
+
+@if (@Model.Length > 20)
+{
+    int length = 20;
+    @Model.ToString().Substring(0, length).Insert(length, "...")
+}
+else
+{
+        @Model
+}
+
+

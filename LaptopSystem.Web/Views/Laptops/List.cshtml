@@ -1,0 +1,37 @@
+﻿@model IEnumerable<LaptopSystem.Web.Models.LaptopViewModel>
+@{
+    ViewBag.Title = "List";
+}
+
+@*@using (Ajax.BeginForm("Search", new AjaxOptions
+                                {
+                                    HttpMethod = "Post",
+                                    InsertionMode = InsertionMode.Replace,
+                                    UpdateTargetId = "laptops-list"
+                                }))*@
+@using (Html.BeginForm("Search", "Laptops", FormMethod.Get))
+{
+    <label><strong>Search</strong></label>
+    <br />
+    <label>By model</label>
+    <br />
+    <input type="text" name="byModel" value="" />
+    <br />
+    <label>By manufacturer</label>
+    <br />
+    <div class="dropdown">
+        @Html.DropDownList("Manufacturer", "All")
+    </div>
+    <br />
+    <label>By price</label>
+    <br />
+    <input type="number" name="byPrice" value=" " />
+    <br /> <br />
+    <input type="submit" name="search-button" value="Search" />
+}
+
+<div id="laptops-list">
+    @Html.Partial("_LaptopsSearchList", Model)
+</div>
+
+
