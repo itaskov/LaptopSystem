@@ -1,0 +1,28 @@
+﻿@model IEnumerable<LaptopSystem.Web.Models.LaptopViewModel>
+
+<div class="container-fluid">
+    @foreach (var laptop in Model)
+    {
+    <div class="row">
+        <div class="col-md-4">
+            <img src="@Url.Content(laptop.ImageUrl)" alt="Laptop Image" />
+        </div>
+        <div class="col-md-4">
+            <h3>@laptop.Manufacturer @laptop.Model</h3>
+        </div>
+        <div class="col-md-4">
+            <p>
+                <a class="btn btn-default btn-md active" role="button"
+                   href="@Url.Action("Details", "Laptops", new { id = laptop.Id })">
+                    Price $@laptop.Price
+                </a>
+            </p>
+        </div>
+    </div>
+    }
+</div>
+
+@for (int i = 1; i <= ViewBag.Pages; i++)
+{
+    <a href="@Url.Action("Search", new { page = i })" class="pager-search">@i</a>
+}

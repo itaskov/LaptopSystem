@@ -1,0 +1,80 @@
+﻿@model LaptopSystem.Web.Models.LaptopSearchModel
+@{
+    ViewBag.Title = "Search";
+}
+
+@*@using (Ajax.BeginForm("Search", new AjaxOptions
+    {
+        HttpMethod = "Post",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "laptops-list"
+    }))*@
+<div class="container-fluid">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Search", "Laptops", FormMethod.Get, new
+        {
+            @role = "form", @*@class = "form-inline"*@ }))
+        {
+            @*<h4><strong>Search</strong></h4>
+                <br />*@
+            //@Html.ValidationSummary()
+            <div class="form-group">
+                @*<label for="byModel">By model</label>
+                    <input type="search" class="form-control" placeholder="Enter model" id="byModel"
+                           name="byModel" value="@ViewBag.Model"
+                           data-autocomplete-url="@Url.Action("Autocomplete")" />*@
+
+                @Html.LabelFor(m => m.ByModel, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.ByModel, new
+               {
+                   @class = "form-control",
+                   @placeholder = "Enter model",
+                   @id = "byModel",
+                   @name = "byModel",
+                   @data_autocomplete_url = "@Url.Action('Autocomplete')"
+               })
+                @Html.ValidationMessageFor(m => m.ByModel)
+            </div>
+            <div class="form-group">
+                @*<label for="byManufacturer">By manufacturer</label>*@
+                @Html.LabelFor(m => m.ByManufacturer, new { @class = "control-label" })
+                @*@Html.DropDownList("byManufacturer", (IEnumerable<SelectListItem>)ViewBag.Manufacturer, "All", new { @class = "form-control" })*@
+                @Html.DropDownListFor(m => m.ByManufacturer, Model.Manufacturers, "All", new { @class = "form-control", @id = "byManufacturer" })
+            </div>
+            <div class="form-group">
+                @*<label for="byPrice">By price</label>
+                    <input id="byPrice" type="number" name="byPrice" value="@ViewBag.Price" class="form-control" />*@
+                @Html.LabelFor(m => m.ByPrice, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.ByPrice, new { @class = "form-control", @id = "byPrice" })
+            </div>
+            <input type="submit" id ="typeahead"name="search-button" value="Search" />
+
+        }
+    </div>
+    <div class="col-md-6">
+        <div id="the-basics">
+            <input class="typeahead" type="text" autocomplete="off" placeholder="States of USA">
+        </div>
+        <div id="bloodhound">
+            <input class="typeahead" type="text" placeholder="States of USA">
+        </div>
+
+    </div>
+</div>
+<hr />
+<div id="laptops-list">
+    @if (Model.Laptops != null)
+    {
+        @Html.Partial("_LaptopsSearchList", Model.Laptops)
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/laptopSystem")
+    @Scripts.Render("~/Scripts/Autocomplete.js")
+    @Scripts.Render("~/bundles/typeahead-bloodhound")
+    @Scripts.Render("~/bundles/typeahead-jquery")
+}
+
+

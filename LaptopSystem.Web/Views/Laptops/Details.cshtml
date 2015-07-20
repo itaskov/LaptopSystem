@@ -1,0 +1,87 @@
+﻿@model LaptopSystem.Web.Models.LaptopDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h3>Details</h3>
+@Html.ValidationSummary()
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <p><strong>Monitor: </strong>@Model.MonitorSize"</p>
+            <p><strong>HDD: </strong>@Model.HardDiskSize GB</p>
+            <p><strong>RAM: </strong>@Model.RamMemorySize GB</p>
+            <p><strong>Price: </strong>$@Model.Price</p>
+        </div>
+        <div class="col-md-4">
+            <img src="@Url.Content(Model.ImageUrl)" alt="Laptop Image" />
+        </div>
+        <div class="col-md-4">
+            <p><strong>Weight: </strong>@Model.Weight</p>
+            <p><strong>Additional parts: </strong>@Model.AdditionalParts</p>
+            <p><strong>Description: </strong>@Model.Description</p>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    Votes: <span id="laptop-votes">@Model.Votes</span>
+    @if (User.Identity.IsAuthenticated && Model.UserCanVote)
+    {
+        @Ajax.ActionLink("Vote", "Vote", new { id = Model.Id },
+                 new AjaxOptions
+                 {
+                     InsertionMode = InsertionMode.Replace,
+                     UpdateTargetId = "laptop-votes",
+                     HttpMethod = "Post",
+                     OnSuccess = "hideVoteButton"
+                 },
+                 new { id = "vote-button", @class = "btn btn-default" })
+    }
+</div>
+<div id="Comments">
+    @foreach (var comment in Model.Comments)
+    {
+        Html.RenderPartial("_Comments", comment);
+    }
+</div>
+<br />
+<div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        using (Ajax.BeginForm("PostComment", new AjaxOptions
+        {
+            HttpMethod = "Post",
+            InsertionMode = InsertionMode.InsertAfter,
+            UpdateTargetId = "Comments",
+            OnSuccess = "postCommentSuccess",
+            OnFailure = "postCommentFailure"
+        }))
+        {
+            @Html.Hidden("LaptopId", Model.Id)
+            <strong>Add comment</strong>
+            <br />
+            @Html.TextArea("comment", htmlAttributes: new { @placeholder = "Comment" })
+            @Html.AntiForgeryToken()
+            <br />
+            <input type="submit" name="submit-button" value="Submit" />
+            <span id="comment-error" style="color: red" hidden="hidden">Comment should not be empty and contain email!</span>
+        }
+    }
+</div>
+
+<script>
+    function hideVoteButton() {
+        $("#vote-button").hide()
+    }
+
+    function postCommentSuccess() {
+        $("#comment-error").hide()
+    }
+
+    function postCommentFailure() {
+        $("#comment-error").show()
+    }
+</script>
+

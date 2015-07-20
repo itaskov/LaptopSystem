@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopSystem.Models", "LaptopSystem.Models\LaptopSystem.Models.csproj", "{BC3B81A1-71E9-4034-9B35-08F250431D69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopSystem.Data", "LaptopSystem.Data\LaptopSystem.Data.csproj", "{1FB91310-6BC4-4039-A01E-DFEB758FE157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopSystem.Web", "LaptopSystem.Web\LaptopSystem.Web.csproj", "{5CF87CA6-D487-4729-8B2E-2EF4B0F3C255}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{912538A3-8542-4C1B-9E5C-F7B68DA856B1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopSystem.Uow.Tests", "LaptopSystem.Uow.Tests\LaptopSystem.Uow.Tests.csproj", "{49662B71-C27D-46FC-9A8A-B547BBBC86BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopSystem.Repositories.Tests", "LaptopSystem.Repositories.Tests\LaptopSystem.Repositories.Tests.csproj", "{BD5DAE64-1FCB-4D26-BECB-18C12FD640BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopSystem.Web.Tests", "LaptopSystem.Web.Tests\LaptopSystem.Web.Tests.csproj", "{23A030D3-D901-4ED7-9E13-780490D2CCA3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://itaskov.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LaptopSystem.Models\\LaptopSystem.Models.csproj
+		SccProjectName1 = LaptopSystem.Models
+		SccLocalPath1 = LaptopSystem.Models
+		SccProjectUniqueName2 = LaptopSystem.Data\\LaptopSystem.Data.csproj
+		SccProjectName2 = LaptopSystem.Data
+		SccLocalPath2 = LaptopSystem.Data
+		SccProjectUniqueName3 = LaptopSystem.Web\\LaptopSystem.Web.csproj
+		SccProjectName3 = LaptopSystem.Web
+		SccLocalPath3 = LaptopSystem.Web
+		SccProjectUniqueName4 = LaptopSystem.Uow.Tests\\LaptopSystem.Uow.Tests.csproj
+		SccProjectName4 = LaptopSystem.Uow.Tests
+		SccLocalPath4 = LaptopSystem.Uow.Tests
+		SccProjectUniqueName5 = LaptopSystem.Repositories.Tests\\LaptopSystem.Repositories.Tests.csproj
+		SccProjectName5 = LaptopSystem.Repositories.Tests
+		SccLocalPath5 = LaptopSystem.Repositories.Tests
+		SccProjectUniqueName6 = LaptopSystem.Web.Tests\\LaptopSystem.Web.Tests.csproj
+		SccProjectName6 = LaptopSystem.Web.Tests
+		SccLocalPath6 = LaptopSystem.Web.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC3B81A1-71E9-4034-9B35-08F250431D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3B81A1-71E9-4034-9B35-08F250431D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3B81A1-71E9-4034-9B35-08F250431D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3B81A1-71E9-4034-9B35-08F250431D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB91310-6BC4-4039-A01E-DFEB758FE157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB91310-6BC4-4039-A01E-DFEB758FE157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB91310-6BC4-4039-A01E-DFEB758FE157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB91310-6BC4-4039-A01E-DFEB758FE157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF87CA6-D487-4729-8B2E-2EF4B0F3C255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF87CA6-D487-4729-8B2E-2EF4B0F3C255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF87CA6-D487-4729-8B2E-2EF4B0F3C255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF87CA6-D487-4729-8B2E-2EF4B0F3C255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49662B71-C27D-46FC-9A8A-B547BBBC86BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49662B71-C27D-46FC-9A8A-B547BBBC86BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49662B71-C27D-46FC-9A8A-B547BBBC86BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49662B71-C27D-46FC-9A8A-B547BBBC86BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5DAE64-1FCB-4D26-BECB-18C12FD640BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5DAE64-1FCB-4D26-BECB-18C12FD640BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5DAE64-1FCB-4D26-BECB-18C12FD640BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5DAE64-1FCB-4D26-BECB-18C12FD640BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A030D3-D901-4ED7-9E13-780490D2CCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A030D3-D901-4ED7-9E13-780490D2CCA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A030D3-D901-4ED7-9E13-780490D2CCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A030D3-D901-4ED7-9E13-780490D2CCA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
